@@ -57,11 +57,13 @@ namespace GroceryShopping.Service
                         {
                             remaningItem = groceryTotal.count - 6; //1
                             packOf6 = groceryTotal.count - remaningItem; //6
-                        }
-                        if (groceryTotal.count == 6 || packOf6 == 6)
-                        {
-                            var price = 5;
-                            total += price;
+                            total += 5;
+                            if (remaningItem >= 6)
+                            {
+                                remaningItem -= 6;
+                                packOf6 = groceryTotal.count - remaningItem;
+                                total += 5;
+                            } 
                         }
                         if(remaningItem >= 1)
                         {
