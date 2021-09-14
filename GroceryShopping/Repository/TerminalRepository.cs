@@ -7,8 +7,12 @@ using System.Threading.Tasks;
 
 namespace GroceryShopping.Repository
 {
+    /// <summary>
+    /// Implemenation of <see cref="ITerminalRepository"/>
+    /// </summary>
     public class TerminalRepository : ITerminalRepository
     {
+        // </inheritdoc>
         public async Task<GroceryItems> GetById(string item)
         {
             List<GroceryItems> groceryList = new()

@@ -15,11 +15,20 @@ namespace GroceryShopping.Controllers
     {
         private readonly ITerminalService _grocery;
 
+        /// <summary>
+        /// Initializes a new instance
+        /// </summary>
+        /// <param name="grocery"></param>
         public TerminalController(ITerminalService grocery)
         {
             _grocery = grocery;
         }
 
+        /// <summary>
+        /// Total grocery item price
+        /// </summary>
+        /// <param name="groceryItems">list of items</param>
+        /// <returns>Ok result</returns>
         [HttpPost]
         public async Task<ActionResult> CalCulateTotal([FromBody] string groceryItems)
         {

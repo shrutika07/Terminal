@@ -8,15 +8,23 @@ using System.Threading.Tasks;
 
 namespace GroceryShopping.Service
 {
+    /// <summary>
+    /// Implementation of <see cref="ITerminalService"/>
+    /// </summary>
     public class TerminalService : ITerminalService
     {
         private readonly ITerminalRepository _groceryRepository;
 
+        /// <summary>
+        /// Initilizes a new instance
+        /// </summary>
+        /// <param name="groceryRepository">to interact with <see cref="ITerminalRepository"/></param>
         public TerminalService(ITerminalRepository groceryRepository)
         {
             _groceryRepository = groceryRepository;
         }
 
+        //</inhertdoc>
         public async Task<decimal> CalCulateTotal(string groceryItems)
         {
             

@@ -16,6 +16,11 @@ namespace GroceryShopping.TestCases
             _terminalController = new TerminalController(_terminalService.Object);
         }
         
+
+        /// <summary>
+        /// Calculate total price of item
+        /// </summary>
+        /// <param name="request">item list</param>
         [Theory]
         [InlineData("ABCDABA")]
         [InlineData("CCCCCCC")]
